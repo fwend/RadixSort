@@ -5,8 +5,8 @@ const radixSort = a => {
     const digits = Array(a.length).fill(0);
 
     for (let exp = 1; exp <= max; exp *= 10) {
-        for (let j = 0; j < a.length; j++) {
-            digits[j] = Math.floor(a[j] / exp) % 10;
+        for (let i = 0; i < a.length; i++) {
+            digits[i] = Math.floor(a[i] / exp) % 10;
         }
         countingSort(digits, a);
     }
