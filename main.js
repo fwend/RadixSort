@@ -2,7 +2,7 @@ const arr = [170, 45, 75, 90, 802, 24, 2, 66, 999, 1000, 1001];
 
 const radixSort = a => {
     const max = getMax(a);
-    const digits = Array(a.length).fill(0);
+    const digits = Array(a.length);
 
     for (let exp = 1; exp <= max; exp *= 10) {
         for (let i = 0; i < a.length; i++) {
